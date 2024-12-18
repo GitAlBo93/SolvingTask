@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import postsReducer from "./features/Posts/postsSlice.ts";
 import PostsList from "./features/Posts/PostsList.tsx";
 import App from "./App.tsx";
+import { AppRoutes } from "./shared/routes.ts";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 
@@ -19,8 +20,8 @@ root.render(
   <Router>
     <Provider store={store}>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/posts" element={<PostsList />} />
+        <Route path={AppRoutes.HOME} element={<App />} />
+        <Route path={AppRoutes.POSTS} element={<PostsList />} />
       </Routes>
     </Provider>
   </Router>,
