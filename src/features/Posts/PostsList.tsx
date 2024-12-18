@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootDispatch } from "../../main.tsx";
 import { getPosts, selectPostsState } from "./postsSlice.ts";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../shared/routes.ts";
 
 export const PostsList = () => {
   const dispatch = useDispatch<RootDispatch>();
@@ -21,9 +23,10 @@ export const PostsList = () => {
 
   return (
     <div>
-      <button>Main Page</button>
+      <Link to={AppRoutes.HOME}>
+        <button>Main Page</button>
+      </Link>
       <h1>View Posts</h1>
-
       {posts &&
         posts.map(({ id, title, body }) => (
           <div key={id}>
