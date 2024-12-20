@@ -10,19 +10,19 @@ const person5 = { name: "Alex", age: null };
 const person6 = { name: "Alex", age: null };
 
 export const Task_133 = () => {
-  const isDeepEqual = (obj1: any, obj2: any) => {
-    for (const key in obj1) {
-      if (typeof obj1[key] !== "object" && typeof obj2[key] !== "object") {
-        if (obj1[key] !== obj2[key]) {
+  const isDeepEqual = (item1: any, item2: any) => {
+    for (const key in item1) {
+      const field1 = item1[key];
+      const field2 = item2[key];
+      if (typeof field1 !== "object" && typeof field2 !== "object") {
+        if (field1 !== field2) {
           return false;
         }
       } else {
-        const field1 = obj1[key];
-        const field2 = obj2[key];
         const field1ObjectAndField2NotObj =
-          typeof field1 === "object" && typeof obj2[key] !== "object";
+          typeof field1 === "object" && typeof field2 !== "object";
         const field2ObjectAndField1NotObj =
-          typeof field2 === "object" && typeof obj1[key] !== "object";
+          typeof field2 === "object" && typeof field1 !== "object";
 
         if (field1ObjectAndField2NotObj || field2ObjectAndField1NotObj) {
           return false;
@@ -30,7 +30,7 @@ export const Task_133 = () => {
         if ((field1 && !field2) || (!field1 && field2)) {
           return false;
         }
-        return isDeepEqual(obj1[key], obj2[key]);
+        return isDeepEqual(field1, field2);
       }
     }
     return true;
