@@ -3,4 +3,5 @@ export enum AppRoutes {
   POSTS = "/posts",
   TASK133 = "/task133",
   TASK135 = "/task135",
+  TASK140 = "/task140",
 }
