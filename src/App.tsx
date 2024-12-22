@@ -19,6 +19,12 @@ function App() {
       <Link to={AppRoutes.POSTS} className="card">
         <button>Get Posts</button>
       </Link>
+      <Link to={AppRoutes.TASK133} className="card">
+        <button>Task_133</button>
+      </Link>
+      <Link to={AppRoutes.TASK135} className="card">
+        <button>Task_135</button>
+      </Link>
     </>
   );
 }
