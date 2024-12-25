@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../shared/routes.ts";
 
 export const Task_138 = () => {
   const [loginControl, setLoginControl] = useState({
@@ -50,6 +52,9 @@ export const Task_138 = () => {
         />
         <button type="submit">Submit</button>
       </form>
+      <Link to={AppRoutes.HOME}>
+        <button>Main Page</button>
+      </Link>
     </div>
   );
 };
