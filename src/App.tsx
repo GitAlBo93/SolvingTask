@@ -34,6 +34,9 @@ function App() {
       <Link to={AppRoutes.TASK149} className="card">
         <button>Task_149</button>
       </Link>
+      <Link to={AppRoutes.TASK157} className="card">
+        <button>Task_157</button>
+      </Link>
     </>
   );
 }
