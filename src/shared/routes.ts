@@ -9,4 +9,5 @@ export enum AppRoutes {
   TASK150 = "/task150",
   TASK154 = "/task154",
   TASK157 = "/task157",
+  TASK158 = "/task158",
 }
