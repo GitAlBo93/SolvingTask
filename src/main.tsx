@@ -15,6 +15,7 @@ import { Task_138 } from "./Tasks/Task_138/Task_138.tsx";
 import { Task_149 } from "./Tasks/Task_149/Task_149.tsx";
 import { Task_157 } from "./Tasks/Task_157/Task_157.tsx";
 import { Task_154 } from "./Tasks/Task_154/Tasl_154.tsx";
+import { Task_158 } from "./Tasks/Task_158/Task_158.tsx";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 
@@ -35,8 +36,9 @@ root.render(
         <Route path={AppRoutes.TASK138} element={<Task_138 />} />
         <Route path={AppRoutes.TASK140} element={<Task_140 data={data} />} />
         <Route path={AppRoutes.TASK149} element={<Task_149 />} />
-        <Route path={AppRoutes.TASK157} element={<Task_157 />} />
         <Route path={AppRoutes.TASK154} element={<Task_154 />} />
+        <Route path={AppRoutes.TASK157} element={<Task_157 />} />
+        <Route path={AppRoutes.TASK158} element={<Task_158 />} />
       </Routes>
     </Provider>
   </Router>,
