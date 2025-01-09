@@ -37,7 +37,7 @@ export const Task_158 = () => {
         {users.map(({ id, name }) => {
           const countTodo = posts.filter(({ userId }) => userId === id);
           return (
-            <ul>
+            <ul key={id}>
               <li>{name}</li>
               <li>{countTodo.length}</li>
             </ul>
