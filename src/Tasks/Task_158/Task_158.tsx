@@ -23,8 +23,6 @@ export const Task_158 = () => {
       setPosts(await getData(URL_TODOS));
     })();
   }, []);
-  console.log(users);
-  console.log(posts);
 
   return (
     <div>
